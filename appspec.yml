@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+   - source: WeatherMicroService-1.0.jar
+     destination: /opt
+hooks:
+   ApplicationStart:
+    - location: startmicroservice.sh
+      runas: root
+   ApplicationStop:
+    - location: stopmicroservice.sh
+      runas: root
